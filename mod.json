@@ -1,0 +1,56 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"android": "2.2081"
+	},
+	"id": "yourname.ship-assist",
+	"name": "Ship Straight Assist",
+	"version": "v1.0.1",
+	"developer": "YourName",
+	"description": "When you spam-click in ship mode, the ship holds a straight line instead of bouncing around.",
+	"tags": ["gameplay", "utility"],
+	"settings": {
+		"enabled": {
+			"name": "Enabled",
+			"description": "Turns the assist on or off.",
+			"type": "bool",
+			"default": true
+		},
+		"click-count": {
+			"name": "Clicks to trigger",
+			"description": "How many fast clicks activate the assist.",
+			"type": "int",
+			"default": 3,
+			"min": 2,
+			"max": 10,
+			"control": { "input": true, "slider": true }
+		},
+		"click-window": {
+			"name": "Click window (seconds)",
+			"description": "The clicks must happen within this time.",
+			"type": "float",
+			"default": 0.6,
+			"min": 0.1,
+			"max": 2.0,
+			"control": { "input": true, "slider": true }
+		},
+		"release-time": {
+			"name": "Stop delay (seconds)",
+			"description": "Assist turns off this long after your last click.",
+			"type": "float",
+			"default": 0.3,
+			"min": 0.05,
+			"max": 1.5,
+			"control": { "input": true, "slider": true }
+		},
+		"strength": {
+			"name": "Assist strength",
+			"description": "1.0 = perfectly flat line, lower = gentler help.",
+			"type": "float",
+			"default": 0.8,
+			"min": 0.1,
+			"max": 1.0,
+			"control": { "input": true, "slider": true }
+		}
+	}
+}
