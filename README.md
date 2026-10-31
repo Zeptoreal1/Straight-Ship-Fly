@@ -8,6 +8,20 @@ bouncing up and down everywhere. That's it. Simple.
 I'm a beginner at this so it's not perfect, but it works and it's easy to tweak, ok?
 If something feels off, just change the settings below. cmon, it takes like 10 seconds.
 
+## What's new in v1.1.0 (big QoL update)
+Everything from before still works the same, all your old settings are still there. New stuff:
+- **Pause menu button** (bottom left): tap **Assist** and a clean menu opens, so you never have to
+  go into the Geode mod menu again.
+- **Presets**: Soft, Balanced or Strong in one tap. Strong is the old v1.0 feel.
+- **Soft ramp**: eases the assist in instead of snapping on. Feels smoother.
+- **Hard flatten**: holds the ship perfectly level while it's on.
+- **Cooldown**: stops it re-triggering straight away after it turns off.
+- **Practice mode only**: only runs in practice, so it can't touch normal runs.
+- **Affect player 2**: also helps the second ship in dual.
+- **Quick toggle button**: optional little SA button to switch it on/off mid level (dim = off, hidden when paused). No text pops up on your screen.
+- **Session stats**: the menu shows how many times it triggered and how long it helped.
+- **Reset button**: puts every setting back to default if you mess it up (we've all done it).
+
 ## How it works (the easy version)
 - You click fast in ship, the mod notices.
 - Once you click enough times fast enough, the assist turns on and calms the ship down.
@@ -24,6 +38,8 @@ These are the defaults now, and they're what I'd start with:
 | Click window | 0.5 s | Clicks have to be quick to count |
 | Stop delay | 0.2 s | Lets go fast so you can steer again |
 | Assist strength | 0.5 | Helps flatten the ship but you still feel your clicks |
+
+The new settings (cooldown, soft ramp, hard flatten and so on) are all off or neutral by default, so nothing changes until you turn them on.
 
 Tuning it yourself:
 - Ship feels **stuck / too flat**? Turn **strength down** (try 0.3).

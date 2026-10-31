@@ -5,10 +5,13 @@
 	},
 	"id": "yourname.ship-assist",
 	"name": "Ship Straight Assist",
-	"version": "v1.0.1",
+	"version": "v1.1.0",
 	"developer": "YourName",
-	"description": "When you spam-click in ship mode, the ship holds a straight line instead of bouncing around.",
-	"tags": ["gameplay", "utility"],
+	"description": "When you spam-click in ship mode, the ship holds a straight line instead of bouncing. v1.1: pause-menu GUI, presets, soft ramp, hard flatten, cooldown, practice-only and quick toggle.",
+	"tags": [
+		"gameplay",
+		"utility"
+	],
 	"settings": {
 		"enabled": {
 			"name": "Enabled",
@@ -23,34 +26,106 @@
 			"default": 3,
 			"min": 2,
 			"max": 10,
-			"control": { "input": true, "slider": true }
+			"control": {
+				"input": true,
+				"slider": true
+			}
 		},
 		"click-window": {
 			"name": "Click window (seconds)",
 			"description": "The clicks must happen within this time.",
 			"type": "float",
-			"default": 0.6,
+			"default": 0.5,
 			"min": 0.1,
 			"max": 2.0,
-			"control": { "input": true, "slider": true }
+			"control": {
+				"input": true,
+				"slider": true
+			}
 		},
 		"release-time": {
 			"name": "Stop delay (seconds)",
 			"description": "Assist turns off this long after your last click.",
 			"type": "float",
-			"default": 0.3,
+			"default": 0.2,
 			"min": 0.05,
 			"max": 1.5,
-			"control": { "input": true, "slider": true }
+			"control": {
+				"input": true,
+				"slider": true
+			}
 		},
 		"strength": {
 			"name": "Assist strength",
 			"description": "1.0 = perfectly flat line, lower = gentler help.",
 			"type": "float",
-			"default": 0.8,
+			"default": 0.5,
 			"min": 0.1,
 			"max": 1.0,
-			"control": { "input": true, "slider": true }
+			"control": {
+				"input": true,
+				"slider": true
+			}
+		},
+		"cooldown": {
+			"name": "Cooldown (seconds)",
+			"description": "After the assist turns off, it cannot trigger again for this long. 0 = no cooldown.",
+			"type": "float",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 1.0,
+			"control": {
+				"input": true,
+				"slider": true
+			}
+		},
+		"ramp-time": {
+			"name": "Soft ramp (seconds)",
+			"description": "Eases the assist in over this time instead of snapping on. 0 = instant (same as v1.0).",
+			"type": "float",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 1.0,
+			"control": {
+				"input": true,
+				"slider": true
+			}
+		},
+		"hard-flatten": {
+			"name": "Hard flatten",
+			"description": "Holds the ship perfectly level while the assist is on (ignores strength).",
+			"type": "bool",
+			"default": false
+		},
+		"practice-only": {
+			"name": "Practice mode only",
+			"description": "Only run the assist in Practice Mode.",
+			"type": "bool",
+			"default": false
+		},
+		"affect-player2": {
+			"name": "Affect player 2",
+			"description": "Also assist the second ship in dual mode.",
+			"type": "bool",
+			"default": true
+		},
+		"quick-button": {
+			"name": "Quick toggle button",
+			"description": "Adds a small SA button on screen to switch the assist on or off mid-level (dim = off, hidden while paused).",
+			"type": "bool",
+			"default": false
+		},
+		"pause-button-scale": {
+			"name": "Pause button size",
+			"description": "Size of the Assist button on the pause screen.",
+			"type": "float",
+			"default": 0.9,
+			"min": 0.5,
+			"max": 1.5,
+			"control": {
+				"input": true,
+				"slider": true
+			}
 		}
 	}
 }
